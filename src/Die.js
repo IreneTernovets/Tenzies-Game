@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Die = () => {
+const Die = (props) => {
+
   return (
-    <div>2</div>
+    <div className={props.isHeld ? 'die-element held-element' : 'die-element'} onClick={props.holdDice}>{props.value}</div>
   )
 }
 
